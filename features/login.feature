@@ -2,11 +2,8 @@ Feature: The Internet Guinea Pig Website
 
   Scenario Outline: As a user, I can log into the secure area
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
-
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+    Given I am on the homepage page
+    When I click on close cookies button
+    And I click on the navigation ellipses
+    When I click on the sign in text within the expanded navigation
+    Then I expect the sign in modal will be displayed

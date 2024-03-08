@@ -5,19 +5,8 @@ const Page = require('./page');
  * sub page containing specific selectors and methods for a specific page
  */
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername () {
-        return $('#username');
-    }
-
-    get inputPassword () {
-        return $('#password');
-    }
-
-    get btnSubmit () {
-        return $('button[type="submit"]');
+    get signInModal () {
+        return $("//h1[contains(text(),'Sign in to your MLS ID')]");
     }
 
     /**
@@ -34,7 +23,7 @@ class LoginPage extends Page {
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return super.open('login')
     }
 }
 
