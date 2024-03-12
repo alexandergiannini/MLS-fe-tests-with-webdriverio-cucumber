@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.32.4",
     "@wdio/cli": "^8.32.4",
     "@wdio/cucumber-framework": "^8.32.4",
     "@wdio/junit-reporter": "^8.32.4",
